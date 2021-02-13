@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A very basic application to learn the basics for sending RESTful responses in JSON format. The first portion of this project was to create a kitten model, controller and views. This could have easily been done using a Rails scaffold, however doing everything without scaffolding was good review. The second part was to then add JSON responses to the index and show methods in the controller. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Part of The Odin Project Ruby on Rails curriculum.
+https://www.theodinproject.com/courses/ruby-on-rails/lessons/kittens-api
