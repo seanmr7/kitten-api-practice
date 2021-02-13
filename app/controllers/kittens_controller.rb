@@ -13,6 +13,7 @@ class KittensController < ApplicationController
   end
 
   def edit
+    @kitten = Kitten.find(params[:id])
   end
 
   def create
@@ -27,6 +28,7 @@ class KittensController < ApplicationController
   end
 
   def update
+    @kitten = Kitten.find(params[:id])
     if @kitten.update(kitten_params)
       flash[:success] = "Kitten updated!"
       redirect_to @kitten
@@ -35,10 +37,12 @@ class KittensController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @kitten = Kitten.find(params[:id])
     @kitten.destroy
-
-    redirect_to root_path
+    respond_to do |format|
+      format.html { redirect_to kittens_url, notice: "Kitten was successfully destroyed." }
+    end
   end
 
   private

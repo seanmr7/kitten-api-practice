@@ -1,1 +1,9 @@
-<h1>Index</h1>
+<h1>Kitten Index</h1>
+<% @kittens.each do |kitten| %>
+  <p>Name: <%= link_to kitten.name, kitten %></p>
+  <p>Age: <%= kitten.age %></p>
+  <p>Cuteness: <%= kitten.cuteness %></p>
+  <p>Softness: <%= kitten.softness %></p>
+<% end %>
+
+<%= link_to "Add Kitten", new_kitten_path %>

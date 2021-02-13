@@ -1,0 +1,25 @@
+<%= form_with(model: @kitten) do |f| %>
+  <% if @kitten.errors.any? %>
+    <h2><%= pluralize(@kitten.errors.count, "error") %>prohibited this kitten from being saved: </h2>
+  
+    <ul>
+      <% @kitten.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :cuteness %>
+  <%= f.text_field :cuteness %>
+
+  <%= f.label :softness %>
+  <%= f.text_field :softness %>
+
+  <%= f.submit %>
+<% end %>
